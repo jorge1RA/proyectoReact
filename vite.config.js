@@ -1,7 +1,7 @@
-import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react'
+import { defineConfig } from "vite"; // Importa la función defineConfig de Vite
+import react from "@vitejs/plugin-react"; // Importa el plugin react de Vite para trabajar con React
 
-// https://vitejs.dev/config/
+// Configura Vite utilizando la función defineConfig
 export default defineConfig({
-  plugins: [react()]
-})
+  plugins: [react()], // Configura los plugins de Vite, en este caso, solo se utiliza el plugin de React
+});

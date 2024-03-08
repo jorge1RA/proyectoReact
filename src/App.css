@@ -1,63 +1,95 @@
+/* Importa la fuente Roboto desde Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap');
 
+/* Estilos Globales */
 body {
+  /* Establece la fuente predeterminada para todo el cuerpo del documento como 'Roboto', sans-serif */
   font-family: 'Roboto', sans-serif;
+  /* Elimina el margen predeterminado */
   margin: 0;
 }
+
+/* Estilos de la Aplicación */
 .App {
-  background-color: #e6e6e659;
+  /* Fondo de la aplicación */
+  background-color: #e6e6e659; /* Color de fondo con transparencia */
 }
+
+/* Estilos para el modo oscuro */
 .App.darkbg {
+  /* Cambia el fondo de la aplicación a negro con una opacidad baja */
   background-color: #000000c2;
 }
 
+/* Estilos para el Encabezado */
 .hero {
+  /* Fondo del encabezado */
   background-color: #ffdd67;
+  /* Espaciado interior del encabezado */
   padding: 5% 0;
+  /* Flexbox para alinear elementos */
   display: flex;
   flex-direction: column;
   align-items: center;
-}
-.hero h2 {
-  font-size: 70px;
-  font-weight: 900;
-  margin: 15px 0;
 }
 
-/* Form component... */
+.hero h2 {
+  /* Estilos del título principal del encabezado */
+  font-size: 70px;
+  font-weight: 900;
+  margin: 15px 0; /* Margen superior e inferior de 15px, sin margen horizontal */
+}
+
+/* Estilos para el Componente de Formulario */
 .form {
+  /* Flexbox para alinear elementos en columna */
   display: flex;
   flex-direction: column;
   align-items: center;
+  /* Espaciado interior del formulario */
   padding: 4% 0 4%;
+  /* Posición relativa para los elementos internos */
   position: relative;
 }
+
 .form form {
+  /* Flexbox para alinear elementos del formulario */
   display: flex;
   align-items: center;
-  gap: 20px;
+  gap: 20px; /* Espaciado entre los elementos del formulario */
 }
+
 .form form button {
+  /* Estilos del botón del formulario */
   background-color: #fff;
   padding: 9px 8px;
   font-size: inherit;
   border: 0;
   border-radius: 4px;
+  /* Sombra para el botón */
   box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
 }
+
 .form form button:hover {
+  /* Estilos al pasar el cursor sobre el botón */
   background-color: #ffdd67;
 }
+
 .form input[type="text"] {
+  /* Estilos del campo de entrada de texto */
   padding: 9px 10px;
   font-size: inherit;
-  border: 3px solid #ffffff00;
+  border: 3px solid #ffffff00; /* Borde transparente */
   border-radius: 8px;
   width: 300px;
-  outline: none;
+  outline: none; /* Elimina el contorno al enfocar */
+  /* Sombra para el campo de entrada */
   box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+  /* Posición relativa para los elementos internos */
   position: relative;
 }
+
+/* Imagen de fondo para el campo de entrada de texto */
 .form input {
   background-image: url(/enter-icon.png);
   background-size: 10%;
@@ -65,59 +97,78 @@ body {
   background-position: right;
   display: inline-block;
 }
+
+/* Estilos para el modo oscuro del campo de entrada de texto */
 .form.dark-mode input[type="text"] {
   background-color: #4a4a4a;
   color: #fff;
+  /* Sombra para el campo de entrada en modo oscuro */
   box-shadow: rgba(248, 246, 246, 0.395) 0px 1px 3px 0px, rgba(242, 243, 244, 0.326) 0px 0px 0px 1px;
 }
+
+/* Estilos para el texto de marcador de posición en modo oscuro */
 .form.dark-mode input[type="text"]::placeholder {
   color: rgba(255, 255, 255, 0.726);
-
 }
+
+/* Estilos al enfocar el campo de entrada de texto */
 .form input[type="text"]:focus {
   box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
-  /* border: 3px solid #ffdd67; */
 }
 
-/* Results componet */
+/* Resultados */
 .container {
+  /* Ancho máximo del contenedor */
   max-width: 1100px;
-  margin: 0 auto;
-  padding-left: 15px;
-  padding-right: 15px;
+  margin: 0 auto; /* Margen automático a los lados */
+  padding-left: 15px; /* Relleno izquierdo */
+  padding-right: 15px; /* Relleno derecho */
 }
+
 .results {
+  /* Flexbox para alinear y distribuir elementos */
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  /* Espaciado inferior */
   padding-bottom: 3%;
 }
 
-/* Item component */
+/* Componente de Emoji */
 .card-emoji {
-  /* border: 1px solid gray; */
+  /* Estilos para cada emoji */
   background-color: #fff;
   width: 250px;
+  /* Sombra para el componente de emoji */
   box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
-  margin-bottom: 20px;
+  margin-bottom: 20px; /* Margen inferior */
+  /* Flexbox para alinear y distribuir elementos */
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   border-radius: 10px;
-  padding: 10px 0;
-  cursor: pointer;
+  padding: 10px 0; /* Espaciado interno */
+  cursor: pointer; /* Cambia el cursor al pasar por encima */
 }
+
 .card-emoji.dark-mode {
+  /* Estilos en modo oscuro */
   background-color: #4a4a4a;
+  /* Sombra para el modo oscuro */
   box-shadow: rgba(248, 246, 246, 0.395) 0px 1px 3px 0px, rgba(242, 243, 244, 0.326) 0px 0px 0px 1px;
 }
+
 .card-emoji.dark-mode h4 {
+  /* Cambia el color del título en modo oscuro */
   color: #fff;
 }
+
 .card-emoji:hover p.emoji-icon {
+  /* Efecto de animación al pasar el ratón sobre el emoji */
   animation: moveemoji 1.5s infinite;
 }
+
 @keyframes moveemoji {
   0% {
       transform: translateX(0px);
@@ -129,14 +180,20 @@ body {
       transform: translateX(0px);
   }
 }
+
 .card-emoji p.emoji-icon {
+  /* Estilos para el icono de emoji */
   font-size: 84px;
   margin: 0;
 }
+
 .card-emoji {
+  /* Posición relativa para el componente de emoji */
   position: relative;
 }
+
 p.copied {
+  /* Estilos para el mensaje 'Copied!' */
   font-size: 15px;
   font-weight: 600;
   margin: 0;
@@ -147,7 +204,9 @@ p.copied {
   padding: 5px;
   border-radius: 5px;
 }
+
 p.error {
+  /* Estilos para el mensaje de error */
   font-size: 15px;
   font-weight: 600;
   margin: 0;
@@ -157,14 +216,18 @@ p.error {
   padding: 5px;
   border-radius: 5px;
 }
+
 /* Footer */
 footer {
+  /* Estilos para el pie de página */
   padding: 1% 0;
   text-align: center;
   background-color: #ffdd67;
 }
-/* toggle dark mode */
+
+/* Toggle Modo Oscuro */
 .toggle-box {
+  /* Estilos para el contenedor del interruptor */
   width: 38px;
   height: 20px;
   background-color: #2B283A;
@@ -177,30 +240,42 @@ footer {
   border: 1px solid black;
   box-sizing: content-box;
 }
+
 .dark-mode .toggle-box {
+  /* Estilos para el contenedor del interruptor en modo oscuro */
   border-color: white;
   background-color: #F5F5F5;
 }
+
 .toggle-circle {
+  /* Estilos para el círculo del interruptor */
   height: 18px;
   width: 18px;
   background-color: white;
   border-radius: 50%;
 }
+
 .dark-mode .toggle-circle {
+  /* Estilos para el círculo del interruptor en modo oscuro */
   background-color: black;
 }
+
 .dark-mode .toggle-box {
+  /* Alineación del contenedor del interruptor en modo oscuro */
   justify-content: flex-end;
 }
-/* author */
+
+/* Autor */
 p.author {
+  /* Estilos para la información del autor */
   display: flex;
   justify-content: center;
   margin-top: 3%;
   gap: 7px;
 }
+
 p.author a {
+  /* Estilos para los enlaces del autor */
   text-decoration: none;
   font-weight: 700;
   color: #000;
